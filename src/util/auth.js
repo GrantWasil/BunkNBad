@@ -245,7 +245,7 @@ function useIdentifyUser(user, { enabled }) {
     if (enabled && user) {
       analytics.identify(user.uid);
     }
-  }, [user]);
+  }, [enabled, user]);
 }
 
 // A Higher Order Component for requiring authentication

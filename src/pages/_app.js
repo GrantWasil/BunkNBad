@@ -3,6 +3,7 @@ import Navbar from "./../components/Navbar";
 import IndexPage from "./index";
 import CharactersPage from "./characters";
 import AuthSigninPage from "./auth/signin";
+import AuthSignupPage from "./auth/signup";
 import ContactPage from "./contact";
 import { Switch, Route, Router } from "./../util/router";
 import FirebaseActionPage from "./firebase-action";
@@ -29,6 +30,8 @@ function App(props) {
                 <Route exact path="/" component={IndexPage} />
 
                 <Route exact path="/characters" component={CharactersPage} />
+
+                <Route exact path="/auth/signup" component={AuthSignupPage} />
 
                 <Route exact path="/auth/signin" component={AuthSigninPage} />
 

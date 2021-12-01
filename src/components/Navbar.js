@@ -79,16 +79,6 @@ function Navbar(props) {
               </IconButton>
             </Hidden>
             <Hidden smDown={true} implementation="css">
-              <Button component={Link} to="/about" color="inherit">
-                About
-              </Button>
-              <Button component={Link} to="/pricing" color="inherit">
-                Pricing
-              </Button>
-              <Button component={Link} to="/faq" color="inherit">
-                FAQ
-              </Button>
-
               {!auth.user && (
                 <>
                   <Button component={Link} to="/auth/signin" color="inherit">
@@ -142,11 +132,11 @@ function Navbar(props) {
                       horizontal: "center",
                     }}
                   >
-                    <MenuItem component={Link} to="/dashboard">
-                      Dashboard
+                    <MenuItem component={Link} to="/characters">
+                      Characters
                     </MenuItem>
-                    <MenuItem component={Link} to="/settings/general">
-                      Settings
+                    <MenuItem component={Link} to="/testing">
+                      TEST
                     </MenuItem>
                     <Divider />
                     <MenuItem
@@ -159,6 +149,9 @@ function Navbar(props) {
                   </Menu>
                 </>
               )}
+              <Button component={Link} to="/contact" color="inherit">
+                Contact
+              </Button>
 
               <IconButton
                 color="inherit"
@@ -182,16 +175,6 @@ function Navbar(props) {
           className={classes.drawerList}
           onClick={() => setDrawerOpen(false)}
         >
-          <ListItem component={Link} to="/about" button={true}>
-            <ListItemText>About</ListItemText>
-          </ListItem>
-          <ListItem component={Link} to="/faq" button={true}>
-            <ListItemText>Pricing</ListItemText>
-          </ListItem>
-          <ListItem component={Link} to="/about" button={true}>
-            <ListItemText>FAQ</ListItemText>
-          </ListItem>
-
           {!auth.user && (
             <>
               <ListItem component={Link} to="/auth/signin" button={true}>
@@ -212,11 +195,11 @@ function Navbar(props) {
 
           {auth.user && (
             <>
-              <ListItem component={Link} to="/dashboard" button={true}>
-                <ListItemText>Dashboard</ListItemText>
+              <ListItem component={Link} to="/characters" button={true}>
+                <ListItemText>Characters</ListItemText>
               </ListItem>
-              <ListItem component={Link} to="/settings/general" button={true}>
-                <ListItemText>Settings</ListItemText>
+              <ListItem component={Link} to="/test" button={true}>
+                <ListItemText>TEST</ListItemText>
               </ListItem>
               <Divider />
               <ListItem
@@ -229,6 +212,9 @@ function Navbar(props) {
               </ListItem>
             </>
           )}
+          <ListItem component={Link} to="/contact" button={true}>
+            <ListItemText>Contact</ListItemText>
+          </ListItem>
 
           <ListItem>
             <IconButton

@@ -2,16 +2,16 @@ import React from "react";
 import Meta from "../../components/Meta";
 import AuthSection from "../../components/AuthSection";
 
-function AuthSigninPage(props) {
+function AuthSignupPage(props) {
   return (
     <>
-      <Meta title="Auth Signin" />
+      <Meta title="Auth Signup" />
       <AuthSection
         bgColor="default"
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        type="signin"
+        type="signup"
         providers={["google"]}
         afterAuthPath="/characters"
       />
@@ -19,4 +19,4 @@ function AuthSigninPage(props) {
   );
 }
 
-export default AuthSigninPage;
+export default AuthSignupPage;
